@@ -1,15 +1,23 @@
 {
   "name": "nutricionista",
   "version": "1.0.0",
-  "description": "Sistema para aprender javascript",
+  "description": "Sistema da nutricionista",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "lite-server"
   },
-  "author": "Guido Filho",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThiagoThe/ProjetoNutri.git"
+  },
+  "author": "Thiago",
   "license": "ISC",
-  "dependencies": {
+  "bugs": {
+    "url": "https://github.com/guido-warken/nutricionista/issues"
+  },
+  "homepage": "https://github.com/guido-warken/nutricionista#readme",
+  "devDependencies": {
     "lite-server": "^2.6.1"
   }
 }
