@@ -1,10 +1,12 @@
 import { Paciente } from "../models/paciente.js";
+import { listaPacientes } from "../models/listaPacientes.js";
 
-export class PacienteControlle {
+export class PacienteController {
   #campoNome;
   #campoSobrenome;
   #campoPeso;
   #campoAltura;
+  #listaPacientes = new listaPacientes();
 
   constructor() {
     this.#campoAltura = document.getElementById("altura");
@@ -19,6 +21,7 @@ export class PacienteControlle {
     let peso = this.#campoPeso.value;
     let altura = this.#campoAltura.value;
     let paciente = new Paciente(nome, sobrenome, peso, altura);
-    console.log(paciente);
+    this.#listaPacientes.adicionar(paciente);
+    console.log(this.#listaPacientes.pacientes);
   }
 }

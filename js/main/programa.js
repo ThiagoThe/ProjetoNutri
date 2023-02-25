@@ -1,11 +1,10 @@
-import { Paciente } from "../models/paciente.js";
+import { PacienteController } from "../controllers/pacienteController.js";
 
 const tituloPrincipal = document.getElementById("titulo-principal");
 tituloPrincipal.textContent = "Aparecida Nutricionista";
-let paciente = new Paciente("Maria", "Souza", 98, 1.85);
-console.log(paciente.nome);
-console.log(paciente.sobrenome);
-console.log(paciente.peso);
-console.log(paciente.altura);
-paciente.peso = 58;
-console.log(paciente.peso);
+const formulario = document.querySelector(".form");
+const controller = new PacienteController();
+formulario.addEventListener("submit", () => {
+  event.preventDefault();
+  controller.criarPaciente();
+});
